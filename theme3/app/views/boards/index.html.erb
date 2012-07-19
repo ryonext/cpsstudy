@@ -1,0 +1,19 @@
+<h1>Boards#index</h1>
+<p>Find me in app/views/boards/index.html.erb</p>
+
+<table>
+  <tr>
+    <td>title</td>
+    <td>name</td>
+    <td>comment</td>
+  </tr>
+<% @boards.each do |b| %>
+  <tr>
+  <td><%= b.title %></td>
+  <td><%= b.name %></td>
+  <td><%= b.comment %></td>
+</tr>
+<% end %>
+</table>
+
+
