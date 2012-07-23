@@ -2,6 +2,7 @@ Theme3::Application.routes.draw do
 #  get "boards/index"
 #  get "boards/create"
 
+  post "boards/search"
   resources :boards
   # The priority is based upon order of creation:
   # first created -> highest priority.

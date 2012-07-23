@@ -12,8 +12,23 @@
   <td><%= b.title %></td>
   <td><%= b.name %></td>
   <td><%= b.comment %></td>
+  <td><%= link_to('消す', b, :method => :delete)%>
 </tr>
 <% end %>
 </table>
 
+<%= form_for(Board.new) do |f| %>
+  タイトル
+  <%= f.text_field :title %><br />
+  名前
+  <%= f.text_field :name %><br />
+  コメント
+  <%= f.text_area :comment %><br />
+  <%= f.submit %>
+<% end %>
 
+<%= form_tag(:action=>'search') do %>
+  名前による絞り込み
+  <%= text_field_tag :name %>
+  <%= submit_tag '検索', :method => :get %>
+<% end %>
