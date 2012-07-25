@@ -1,7 +1,10 @@
 class AddressesController < ApplicationController
-  def edit
+
+  def create
+    @number = params[:number]
+    @number = Moji.zen_to_han(@number)
+    @number = @number.gsub('-', '')
+    render :show
   end
 
-  def show
-  end
 end

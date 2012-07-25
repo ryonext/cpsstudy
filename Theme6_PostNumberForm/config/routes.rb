@@ -1,7 +1,6 @@
 Theme6Postnumberform::Application.routes.draw do
-  get "addresses/edit"
 
-  get "addresses/show"
+  resources :addresses
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
